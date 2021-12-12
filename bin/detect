@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo "zeke/github-buildpack"
+echo "theorylabs/github-buildpack"
 exit 0
