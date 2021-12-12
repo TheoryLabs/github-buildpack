@@ -24,7 +24,7 @@ heroku config:set GITHUB_AUTH_TOKEN=YOUR_TOKEN_HERE
 Then configure your app to use this buildpack:
 
 ```sh
-heroku buildpacks:add --index 1 zeke/github
+heroku buildpacks:add --index 1 theorylabs/github
 ```
 
 The next time you push your app to Heroku, this buildpack will create a
@@ -42,15 +42,15 @@ you want to `git commit`, you'll need to specify the git user and email:
 ```sh
 git clone https://github.com/you/some-private-repo
 cd some-private-repo
-git config user.email "zeke@sikelianos.com"
-git config user.name "Zeke Sikelianos"
+git config user.email "dane@theorylabs.dev"
+git config user.name "Branden Dane"
 touch some/file
 git commit -am "git commit from a dyno!"
 git push origin master
 ```
 
 ## Using the latest source code
-The `zeke/github` buildpack from the [Heroku Buildpack Registry](https://devcenter.heroku.com/articles/buildpack-registry) represents the latest stable version of the buildpack. If you'd like to use the source code from this Github repository, you can set your buildpack to the Github URL:
+The `theorylabs/github` buildpack from the [Heroku Buildpack Registry](https://devcenter.heroku.com/articles/buildpack-registry) represents the latest stable version of the buildpack. If you'd like to use the source code from this Github repository, you can set your buildpack to the Github URL:
 
 ```sh
 heroku buildpacks:add --index 1 https://github.com/github-modules/github-buildpack
@@ -67,3 +67,5 @@ but the two differ in one significant way: the @timshadel buildpack
 allows authenticated requests to be made only at **build time** (i.e. when your app is
 being deployed), whereas this buildpack allows authenticated requests at
  build time and/or **run time** (when your app is actually running).
+
+meh
